@@ -1,1 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="sidebar" class="sidebar">
+<a href="#" class="profile_pic_a" id="profile_pic_a">
+<img class="profile_pic_img" id="profile_pic_img" src="https://i.pinimg.com/originals/47/5a/86/475a86177aeedacf8dc7f5e2b4eff61f.png">
+</a>
+</div>
+<div class="main_game_page_body" id="main_game_page">
+<div id="name_welcome" class="name_welcome">
+<h1>Hello, John Doe</h1>
+<p>Welcome to amazing math</p>
+</div>
+<div id="clickable" class="game_holder">
+<img src="https://t4.ftcdn.net/jpg/02/07/87/79/360_F_207877921_BtG6ZKAVvtLyc5GWpBNEIlIxsffTtWkv.jpg">
+<p>
+Hextris
+</p>
+</div>
+<div class="game_holder">
+<img src="https://t4.ftcdn.net/jpg/02/07/87/79/360_F_207877921_BtG6ZKAVvtLyc5GWpBNEIlIxsffTtWkv.jpg">
+<p>
+GAME NAME
+</p>
+</div>
+<div class="game_holder">
+<img src="https://t4.ftcdn.net/jpg/02/07/87/79/360_F_207877921_BtG6ZKAVvtLyc5GWpBNEIlIxsffTtWkv.jpg">
+<p>
+GAME NAME
+</p>
+</div>
+<div class="game_holder">
+<img src="https://t4.ftcdn.net/jpg/02/07/87/79/360_F_207877921_BtG6ZKAVvtLyc5GWpBNEIlIxsffTtWkv.jpg">
+<p>
+GAME NAME
+</p>
+</div>
+<div class="game_holder">
+<img src="https://t4.ftcdn.net/jpg/02/07/87/79/360_F_207877921_BtG6ZKAVvtLyc5GWpBNEIlIxsffTtWkv.jpg">
+<p>
+GAME NAME
+</p>
+</div>
+<div class="game_holder">
+<img src="https://t4.ftcdn.net/jpg/02/07/87/79/360_F_207877921_BtG6ZKAVvtLyc5GWpBNEIlIxsffTtWkv.jpg">
+<p>
+GAME NAME
+</p>
+</div>
+<div class="game_holder">
+<img src="https://t4.ftcdn.net/jpg/02/07/87/79/360_F_207877921_BtG6ZKAVvtLyc5GWpBNEIlIxsffTtWkv.jpg">
+<p>
+GAME NAME
+</p>
+</div>
+<div class="game_holder">
+<img src="https://t4.ftcdn.net/jpg/02/07/87/79/360_F_207877921_BtG6ZKAVvtLyc5GWpBNEIlIxsffTtWkv.jpg">
+<p>
+GAME NAME
+</p>
+</div>
+</div>
+<div class="play_game_page_body" style="display:none;" id="play_game_page">
+<div class="banner_div" id="banner_div">
+<img src="https://fightingox1.github.io/image_library/banner.png" id="banner_img" class="banner_img">
+</div>
+<div id="back_arrow" class="back_arrow">
+<a href="#" id="back_arrow">
+<img src="https://cdn.iconscout.com/icon/free/png-256/back-arrow-1767515-1502579.png" id="back_arrow_img" class="back_arrow_img">
+</a>
+</div>
+<div id="branding" class="branding">
+<h1>Amazing Math</h1>
+<h2>By something studios</h2>
+</div>
+<div class="bottom_div" id="bottom_div">
+<img src="https://fightingox1.github.io/image_library/cover.jpg" id="game_cover" class="game_cover">
+<div class="game_play_div" id="game_play_div">
+<div style="padding-bottom: 15%;">
+<b id="game_name">[GAME NAME]</b>
+</div>
+<div style="position: relative;">
+<a id="play_button" href="#">
+<img src="https://fightingox1.github.io/image_library/imageedit_15_6161789067.png">
+</a>
+</div>
+</div>
+<div class="description_div" id="description_div">
+    <b>Description</b>
+    <div class="description_div_text_back" id="description_div_text">
+    <div class="description_div_text">
+    <p id="description">
+    #description
+    </p>
+    </div>
+    </div>
+</div>
+<div class="credits" id="credits">
+<p>Something Studios</p>
+</div>
+</div>
+</div>
+<script>
+var game_div = document.getElementById('clickable');
+var play = document.getElementById('play_game_page')
+var main = document.getElementById('main_game_page')
+var back_arrow = document.getElementById('back_arrow')
 
+game_div.style.cursor = 'pointer';
+game_div.onclick = function() {
+    play.style.display = 'inline';
+    main.style.display = 'none';
+};
+back_arrow.style.cursor = 'pointer';
+back_arrow.onclick = function() {
+    play.style.display = 'none';
+    main.style.display = 'inline';
+};
+
+function set_properties(header_img, game_logo, description, game_name){
+  document.getElementById("banner_img").src = header_img;
+  document.getElementById("game_cover").src = game_logo;
+  document.getElementById("description").innerHTML = description
+  document.getElementById("game_name").innerHTML = game_name
+}
+</script>
+</body>
+</html>
